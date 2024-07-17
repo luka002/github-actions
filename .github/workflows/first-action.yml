@@ -1,0 +1,21 @@
+# Workflow name
+name: First Workflow
+
+# Define events that should trigger this worflow to run
+# workflow_dispatch allows you to run this workflow manually from the Actions tab
+on: workflow_dispatch
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs: 
+  first-job: 
+    # First we need to define a runner on which the job will execute different steps (environment)
+    # Search gihub actions runners to see the list
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps: 
+      # Runs a single command using the runners shell
+      - name: Print greeting
+        run: echo "Hello, world!"
+      - name: Pring goodbye
+        run: echo "Done - bye!"
